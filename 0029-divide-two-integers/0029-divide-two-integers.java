@@ -2,15 +2,15 @@ class Solution {
     public int divide(int dividend, int divisor) {
         if (divisor == 0) {
             if(dividend >= 0){
-                return Integer.MAX_VALUE;
+                return 2147483647;
             }
             else{
-                return Integer.MIN_VALUE;
+                return -2147483648;
             }
         }
         
-        if (dividend == Integer.MIN_VALUE && divisor == -1) {
-            return Integer.MAX_VALUE;
+        if (dividend == -2147483648 && divisor == -1) {
+            return 2147483647;
         }
         
         int quotient = dividend / divisor;
