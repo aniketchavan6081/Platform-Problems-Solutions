@@ -3,27 +3,16 @@ class Solution {
         int m = nums1.length;
         int n = nums2.length;
         int num[] = new int[m+n];
-        int cnt = 0;
         
-        for(int i = 0; i < m; i++){
-            num[i] = nums1[i];
-            cnt++;
-        }
+        for(int i = 0; i < m; i++)  num[i] = nums1[i];
         
-        for(int i = 0; i < n; i++){
-            num[cnt] = nums2[i];
-            cnt++;
-        }
-        
-        int l = num.length;
-        
-        int median = num.length/2;
+        for(int i = 0; i < n; i++)  num[m++] = nums2[i];
+         
+        int mid = num.length/2;
+            
         Arrays.sort(num);
-        if(l%2 != 0){
-            return num[median];
-        }
-        else{
-            return (double)(num[median]+num[median-1])/2;
-        }
+        
+        if(num.length%2 != 0)  return num[mid];
+        else return (double)(num[mid-1]+num[mid])/2;
     }
 }
