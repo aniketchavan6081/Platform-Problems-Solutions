@@ -1,10 +1,10 @@
 class Solution {
     public int[] leftRightDifference(int[] nums) {
         
-        if(nums.length == 1){
-            nums[0] = 0;
-            return nums;
-        }
+        // if(nums.length == 1){
+        //     nums[0] = 0;
+        //     return nums;
+        // }
         int left[] = new int[nums.length];
         left[0] = 0;
         int right[] = new int[nums.length];
