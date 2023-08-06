@@ -10,7 +10,16 @@
  */
 class Solution {
     public int pairSum(ListNode head) {
-        int arr[] = new int[100000];
+        ListNode temp = head;
+        int len = 0;
+        while(temp != null){
+            len++;
+            temp = temp.next;
+        }
+        
+        temp = head;
+        
+        int arr[] = new int[len];
         int n = 0;
         while(head != null){
             arr[n] = head.val;
