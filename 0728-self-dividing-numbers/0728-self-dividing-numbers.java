@@ -4,23 +4,21 @@ class Solution {
         for(int i = left; i <= right; i++){
             int temp = i;
             int cnt = 0;
-
+            int len = String.valueOf(i).length();
             while(temp!=0){
-                int len = String.valueOf(i).length();
                 int rem = temp%10;
                 temp /= 10;
+                
                 if(rem == 0){
-                    continue;
+                    break;
                 }
                 
                 if(i%rem == 0){
                     cnt++;
                 }
-                
-                if(cnt == len){
-                    ans.add(i);
-                } 
-
+            }
+            if(cnt == len){
+                ans.add(i);
             }
         }
         return ans;
