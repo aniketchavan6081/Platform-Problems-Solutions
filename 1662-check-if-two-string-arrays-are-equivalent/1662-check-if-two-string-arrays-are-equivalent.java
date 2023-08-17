@@ -10,8 +10,8 @@ class Solution {
 //         }
         
 //         return str1.equals(str2)?true:false;
-        StringBuilder s1 = new StringBuilder();
-        StringBuilder s2 = new StringBuilder();
+        StringBuffer s1 = new StringBuffer();
+        StringBuffer s2 = new StringBuffer();
         for(String s: word1){
             s1.append(s);
         }
