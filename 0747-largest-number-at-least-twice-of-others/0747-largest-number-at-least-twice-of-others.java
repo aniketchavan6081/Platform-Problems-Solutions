@@ -26,6 +26,9 @@ class Solution {
             } else if (nums[i] > tmp) 
                 tmp = nums[i];
         }
-        return result >= tmp * 2 ? ans : -1;
+        if(result >= tmp*2){
+            return ans;
+        }
+        return -1;
     }
 }
