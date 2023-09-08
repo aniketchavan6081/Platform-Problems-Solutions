@@ -9,8 +9,7 @@ class Solution {
                 binary.append('1');
             }
         }
-        
-        num = Integer.parseInt(binary.toString(), 2);
-        return num;
+    
+        return Integer.parseInt(binary.toString(), 2);
     }
 }
