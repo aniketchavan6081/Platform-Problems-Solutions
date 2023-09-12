@@ -7,7 +7,7 @@ class Solution {
                  cnt++;
              }
              else{
-                 cnt  = 0;
+                 cnt = 0;
              }
            mx = Math.max(mx,cnt);   
         }
