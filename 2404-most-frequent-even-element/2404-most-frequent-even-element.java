@@ -1,6 +1,5 @@
 class Solution {
     public int mostFrequentEven(int[] nums) {
-        
         int maxE = -1;
         int maxCnt = 0;
         int currE = -1;
@@ -18,7 +17,7 @@ class Solution {
                     currCnt = 1;
                 }
 
-                if (currCnt > maxCnt || (currCnt == maxCnt && nums[i] < maxE)) {
+                if(currCnt > maxCnt || (currCnt == maxCnt && nums[i] < maxE)){
                     maxCnt = currCnt;
                     maxE = nums[i];
                 }
