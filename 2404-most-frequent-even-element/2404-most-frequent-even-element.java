@@ -1,12 +1,12 @@
 class Solution {
     public int mostFrequentEven(int[] nums) {
+        Arrays.sort(nums);
+        
         int maxE = -1;
         int maxCnt = 0;
         int currE = -1;
         int currCnt = 0;
 
-        Arrays.sort(nums);
-        
         for(int i = 0; i < nums.length; i++) {
             if(nums[i] % 2 == 0) {
                 if(nums[i] == currE) {
