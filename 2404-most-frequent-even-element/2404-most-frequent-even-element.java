@@ -8,21 +8,19 @@ class Solution {
         int currCnt = 0;
 
         for(int i = 0; i < nums.length; i++) {
-            if(nums[i] % 2 != 0) {
-                continue;   
-            }
-            
-            if(nums[i] == currE) {
-                currCnt++;
-            }
-            else{
-                currE = nums[i];
-                currCnt = 1;
-            }
-            
-            if(currCnt > maxCnt || (currCnt == maxCnt && nums[i] < maxE)){
-                maxCnt = currCnt;
-                maxE = nums[i];
+            if(nums[i] % 2 == 0) {
+                if(nums[i] == currE) {
+                    currCnt++;
+                }
+                else{
+                    currE = nums[i];
+                    currCnt = 1;
+                }
+
+                if(currCnt > maxCnt || (currCnt == maxCnt && nums[i] < maxE)){
+                    maxCnt = currCnt;
+                    maxE = nums[i];
+                }
             }
         }
 
